@@ -1,0 +1,13 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=CoffeeCoin2.0
+Comment=CoffeeCoin2.0 P2P Cryptocurrency
+Comment[fr]=CoffeeCoin2.0, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=CoffeeCoin2.0, eşten eşe kriptografik sanal para birimi
+Comment[es]=CoffeeCoin2.0, una criptomoneda P2P
+Exec=/usr/bin/CoffeeCoin2.0-qt
+Terminal=false
+Type=Application
+Icon=/usr/share/pixmaps/bitcoin80.xpm
+MimeType=x-scheme-handler/CoffeeCoin2.0;
+Categories=Office;
