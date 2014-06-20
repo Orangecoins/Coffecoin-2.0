@@ -1,25 +1,21 @@
 **CoffeeCoin2.0 (OC)**
 
-Coffeecoin2.0 is a unique combination of POW distribution with POS minting to secure the network. Coffeecoin2.0 distribution will start on April 27, 2014 with a limited 2 week mining period. After the initial release of 50 million coins, POS interest will be earned at a rate of 20% in the first year, 10% in the second year, 5% in the third year down to a constant 2.5% interest.
+CoffeeCoin2.0 (CFC)
 
+Coffeecoin2.0 utilizes pure "Proof of Stake" to secure the network. Initial release consists of roughly 100 million coins, completely premined and swapped with the older, corrupt version of CoffeeCoin. POS interest will be earned at a rate of 10% in the first year. The interest rate will decrease at a rate of 5% per year until a floor of 1% is reached. For example, the first year will be 10%, the second year will be 9.5%, the third year will be 9.025%, fourth 8.57%, etc. It will take approximately 45 years to reach the 1% floor.
 
-PoS will start after at least 14 days of holding of the coins in the wallet. With PoS, the coin is more resilient to 51% attack. 
+Coins will be eligible for staking after 24 hours, and will continue to accumulate "staking weight" for 90 days. With PoS, the coin is more resilient to 51% attack.
 
-**Other Specifications:**
+Other Specifications:
 
-- 2 minute  block target
-- 5000 coins per block initially
-- PoW completely remvoed from block 10000
-- Difficulty retargets every block 
-- PoS variable interests:
-	- 1st year: 20%
-	- 2nd year: 10%
-	- 3rd year: 5%
-	- 4th and subsequent years: 2.5%
-- Total coins will be 200 million
-- 4 confirmations for transaction, thus fast 8 mins confirmation for transdactions
-- 300 confirmations for minted blocks
-- .5% premine for development, support and maintenance, new feature developments etc.
+20 second block target
+Difficulty re-targets every block 
+PoS variable interest:
+Begins at 10%. Each subsequent year is 95% of the previous year until a floor of 1% is reached.
+Total coins will begin at 100 million
+3 confirmations for transactions, thus fully confirmed in 1 minute
+40 confirmations for minted blocks
+100% premine of initial ~100 million CFC for a 1:1 swap with coins from the old version
+Coin Control implemented
 
-- Ports: 16789 (connection) and 16889 (RPC)
-
+Ports: 16789 (connection) and 16889 (RPC)
