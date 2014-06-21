@@ -1,5 +1,5 @@
 TEMPLATE = app
-TARGET = CoffeeCoin2.0-qt
+TARGET = CoffeeCoin2.0-Qt
 VERSION = 0.7.2
 INCLUDEPATH += src src/json src/qt
 DEFINES += QT_GUI BOOST_THREAD_USE_LIB BOOST_SPIRIT_THREADSAFE BOOST_THREAD_PROVIDES_GENERIC_SHARED_MUTEX_ON_WIN __NO_SYSTEM_INCLUDES
@@ -8,20 +8,24 @@ CONFIG += no_include_pwd
 # UNCOMMENT THIS SECTION TO BUILD ON WINDOWS
 # Change paths if needed, these use the foocoin/deps.git repository locations
 
-windows{
-BOOST_LIB_SUFFIX=-mgw46-mt-s-1_53
-BOOST_INCLUDE_PATH=C:/deps/boost
-BOOST_LIB_PATH=C:/deps/boost/stage/lib
-BDB_INCLUDE_PATH=C:/deps/db/build_unix
-BDB_LIB_PATH=C:/deps/db/build_unix
-OPENSSL_INCLUDE_PATH=C:/deps/openssl-1.0.1g/include
-OPENSSL_LIB_PATH=C:/deps/openssl-1.0.1g
-MINIUPNPC_INCLUDE_PATH=C:/deps
-LIBPNG_INCLUDE_PATH=C:/deps/libpng-1.6.10
-LIBPNG_LIB_PATH=C:/deps/libpng-1.6.10/.libs
-MINIUPNPC_LIB_PATH=C:/deps/miniupnpc
-QRENCODE_LIB_PATH=C:/deps/qrencode-3.4.3/.libs
-}
+# For compile under Windows, instead changing .pro file, specify all paths in command line, example:
+# qmake coffeecoin-qt.pro RELEASE=1 USE_UPNP=1 -config release QMAKE_LFLAGS+="-static-libgcc -static-libstdc++" BOOST_INCLUDE_PATH=C:/MinGW/msys/1.0/local/include BOOST_LIB_PATH=C:/MinGW/msys/1.0/local/lib BOOST_LIB_SUFFIX=-mgw46-mt-s-1_54
+# make -f Makefile.Release
+
+#windows{
+#BOOST_LIB_SUFFIX=-mgw46-mt-s-1_53
+#BOOST_INCLUDE_PATH=C:/deps/boost
+#BOOST_LIB_PATH=C:/deps/boost/stage/lib
+#BDB_INCLUDE_PATH=C:/deps/db/build_unix
+#BDB_LIB_PATH=C:/deps/db/build_unix
+#OPENSSL_INCLUDE_PATH=C:/deps/openssl-1.0.1g/include
+#OPENSSL_LIB_PATH=C:/deps/openssl-1.0.1g
+#MINIUPNPC_INCLUDE_PATH=C:/deps
+#LIBPNG_INCLUDE_PATH=C:/deps/libpng-1.6.10
+#LIBPNG_LIB_PATH=C:/deps/libpng-1.6.10/.libs
+#MINIUPNPC_LIB_PATH=C:/deps/miniupnpc
+#QRENCODE_LIB_PATH=C:/deps/qrencode-3.4.3/.libs
+#}
 
 OBJECTS_DIR = build
 MOC_DIR = build
@@ -120,7 +124,7 @@ HEADERS += src/qt/bitcoingui.h \
     src/qt/transactiontablemodel.h \
     src/qt/addresstablemodel.h \
     src/qt/optionsdialog.h \
-	src/qt/coincontroldialog.h \
+    src/qt/coincontroldialog.h \
     src/qt/coincontroltreewidget.h \
     src/qt/sendcoinsdialog.h \
     src/qt/addressbookpage.h \
@@ -134,7 +138,7 @@ HEADERS += src/qt/bitcoingui.h \
     src/bignum.h \
     src/checkpoints.h \
     src/compat.h \
-	src/coincontrol.h \
+    src/coincontrol.h \
     src/sync.h \
     src/util.h \
     src/uint256.h \
@@ -199,7 +203,7 @@ SOURCES += src/qt/bitcoin.cpp src/qt/bitcoingui.cpp \
     src/qt/addresstablemodel.cpp \
     src/qt/optionsdialog.cpp \
     src/qt/sendcoinsdialog.cpp \
-	src/qt/coincontroldialog.cpp \
+    src/qt/coincontroldialog.cpp \
     src/qt/coincontroltreewidget.cpp \
     src/qt/addressbookpage.cpp \
     src/qt/signverifymessagedialog.cpp \
@@ -265,7 +269,7 @@ RESOURCES += \
     src/qt/bitcoin.qrc
 
 FORMS += \
-	src/qt/forms/coincontroldialog.ui \
+    src/qt/forms/coincontroldialog.ui \
     src/qt/forms/sendcoinsdialog.ui \
     src/qt/forms/addressbookpage.ui \
     src/qt/forms/signverifymessagedialog.ui \
@@ -290,7 +294,7 @@ SOURCES += src/qt/test/test_main.cpp \
 HEADERS += src/qt/test/uritests.h
 DEPENDPATH += src/qt/test
 QT += testlib
-TARGET = CoffeeCoin2.0-qt_test
+TARGET = CoffeeCoin2.0-Qt_test
 DEFINES += BITCOIN_QT_TEST
 }
 
@@ -370,8 +374,8 @@ macx:HEADERS += src/qt/macdockiconhandler.h
 macx:OBJECTIVE_SOURCES += src/qt/macdockiconhandler.mm
 macx:LIBS += -framework Foundation -framework ApplicationServices -framework AppKit
 macx:DEFINES += MAC_OSX MSG_NOSIGNAL=0
-macx:ICON = src/qt/res/icons/bitcoin.icns
-macx:TARGET = "CoffeeCoin2.0-qt"
+macx:ICON = src/qt/res/icons/CoffeeCoin2.0.icns
+macx:TARGET = "CoffeeCoin2.0-Qt"
 macx:QMAKE_CFLAGS_THREAD += -pthread
 macx:QMAKE_LFLAGS_THREAD += -pthread
 macx:QMAKE_CXXFLAGS_THREAD += -pthread
