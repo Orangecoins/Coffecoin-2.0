@@ -345,7 +345,11 @@
 
 
 	.text
+#if defined(MAC_OSX)
+	.align 16
+#else
 	.align 32
+#endif
 gen_salsa8_core:
 	gen_salsa8_core_quadround()
 	gen_salsa8_core_quadround()
@@ -353,7 +357,11 @@ gen_salsa8_core:
 	
 	
 	.text
+#if defined(MAC_OSX)
+	.align 16
+#else
 	.align 32
+#endif
 	.globl scrypt_core
 	.globl _scrypt_core
 scrypt_core:
@@ -629,7 +637,11 @@ gen_scrypt_core_loop2:
 	xmm_salsa8_core_doubleround(); \
 
 	
+#if defined(MAC_OSX)
+	.align 16
+#else
 	.align 32
+#endif
 xmm_scrypt_core:
 	movl	20(%esp), %edi
 	movl	24(%esp), %esi
