@@ -7,7 +7,7 @@ SetCompressor /SOLID lzma
 !define REGKEY "SOFTWARE\$(^Name)"
 !define VERSION 2.0.0
 !define COMPANY "Coffecoin 2.0 project"
-!define URL http://
+!define URL http://www.coffee-coin.org
 
 # MUI Symbol Definitions
 !define MUI_ICON "..\share\pixmaps\CoffeeCoin2.0.ico"
