@@ -23,8 +23,8 @@ greaterThan(QT_MAJOR_VERSION, 4) {
 #BOOST_LIB_PATH=C:/deps/boost/stage/lib
 #BDB_INCLUDE_PATH=C:/deps/db/build_unix
 #BDB_LIB_PATH=C:/deps/db/build_unix
-#OPENSSL_INCLUDE_PATH=C:/deps/openssl-1.0.1g/include
-#OPENSSL_LIB_PATH=C:/deps/openssl-1.0.1g
+#OPENSSL_INCLUDE_PATH=C:/deps/openssl-1.0.1h/include
+#OPENSSL_LIB_PATH=C:/deps/openssl-1.0.1h
 #MINIUPNPC_INCLUDE_PATH=C:/deps
 #LIBPNG_INCLUDE_PATH=C:/deps/libpng-1.6.10
 #LIBPNG_LIB_PATH=C:/deps/libpng-1.6.10/.libs
